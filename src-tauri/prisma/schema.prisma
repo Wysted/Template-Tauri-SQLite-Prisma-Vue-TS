@@ -1,0 +1,17 @@
+
+generator client {
+    provider = "cargo prisma"
+    output        = "../src/db/prisma.rs"
+
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = "file:dev.db"
+}
+
+
+model User {
+    id    Int @id @default(autoincrement())
+    name String
+}

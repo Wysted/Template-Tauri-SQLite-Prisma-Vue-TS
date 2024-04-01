@@ -1,0 +1,29 @@
+:root {
+    color: #0f0f0f;
+    background-color: #eee;
+
+    --color-opacity: rgba(155, 155, 155, 0.2);
+    --color-bg: #eee;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: color 0.5s ease;
+}
+body {
+    background-color: var(--color-bg);
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: inherit;
+    height: 100vh;
+}
