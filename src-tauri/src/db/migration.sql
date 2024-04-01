@@ -1,5 +1,6 @@
--- CreateTable
-CREATE TABLE IF NOT EXISTS "User" (
-    "id"   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "name" TEXT NOT NULL
-);
+-- Put your database initialization here !
+-- -- CreateTable
+-- CREATE TABLE IF NOT EXISTS "User" (
+--     "id"   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+--     "name" TEXT NOT NULL
+-- );

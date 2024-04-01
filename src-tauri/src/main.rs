@@ -5,10 +5,8 @@ use std::fs;
 
 use db::{ get_client, init_db };
 use state::AppState;
-use commands::user;
 use menu::get_menu;
 
-mod commands;
 mod db;
 mod state;
 mod menu;
@@ -27,15 +25,7 @@ async fn main() {
         ::default()
         .menu(get_menu())
         .manage(AppState { prisma_client })
-        .invoke_handler(
-            tauri::generate_handler![
-                user::create_user,
-                user::delete_user,
-                user::update_user,
-                user::get_user,
-                user::get_all_user
-            ]
-        )
+        .invoke_handler(tauri::generate_handler![])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
